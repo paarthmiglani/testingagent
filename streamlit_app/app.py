@@ -5,15 +5,18 @@ from src.nlp.agent import IndicCulturalChatAgent
 from src.ocr.easyocr_infer import run_easyocr_on_image
 
 # --- AGENT SETUP (adjust paths as needed) ---
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parents[1]
 translit_paths = {
-    "hi": "/Users/paarthmiglani/PycharmProjects/testingagent/data/hindi_transliterated.csv",
-    "te": "/Users/paarthmiglani/PycharmProjects/testingagent/data/telugu_books.csv",
+    "hi": str(BASE_DIR / "data" / "hindi_transliterated.csv"),
+    "te": str(BASE_DIR / "data" / "telugu_books.csv"),
     # add more if needed
 }
 knowledge_files = {
-    "mahabharat": "/Users/paarthmiglani/PycharmProjects/testingagent/data/Mahabharat.csv",
-    "gita": "/Users/paarthmiglani/PycharmProjects/testingagent/data/MERGED_GITA_MANTRAS.csv",
-    "upanishads": "/Users/paarthmiglani/PycharmProjects/testingagent/data/MERGED_upanishads.csv",
+    "mahabharat": str(BASE_DIR / "data" / "Mahabharat.csv"),
+    "gita": str(BASE_DIR / "data" / "MERGED_GITA_MANTRAS.csv"),
+    "upanishads": str(BASE_DIR / "data" / "MERGED_upanishads.csv"),
     # ... add more
 }
 agent = IndicCulturalChatAgent(translit_paths, knowledge_files)

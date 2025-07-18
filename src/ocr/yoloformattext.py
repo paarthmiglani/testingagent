@@ -15,9 +15,12 @@ def quad_to_yolo_bbox(coords, img_w, img_h):
     return x_c, y_c, w, h
 
 # ---- CHANGE THESE -----
-IMAGES_DIR = "/Users/paarthmiglani/PycharmProjects/manualagent/images"
-LABELS_IN_DIR = "/Users/paarthmiglani/PycharmProjects/manualagent/imagestext"
-LABELS_OUT_DIR = "/Users/paarthmiglani/PycharmProjects/manualagent/labels"
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parents[2]
+
+IMAGES_DIR = BASE_DIR / "data" / "images"
+LABELS_IN_DIR = BASE_DIR / "data" / "imagestext"
+LABELS_OUT_DIR = BASE_DIR / "data" / "labels"
 os.makedirs(LABELS_OUT_DIR, exist_ok=True)
 
 from PIL import Image
