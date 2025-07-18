@@ -13,6 +13,9 @@ def keyword_search(query, dataset_path):
         except Exception as e:
             print(f"Failed to read {dataset_path}: {e}")
             return pd.DataFrame()  # Return empty if all fail
+    except FileNotFoundError:
+        print(f"File not found: {dataset_path}")
+        return pd.DataFrame()
     # Now do search
     results = df[df.apply(lambda row: query.lower() in str(row).lower(), axis=1)]
     return results
