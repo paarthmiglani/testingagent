@@ -28,7 +28,9 @@ class IndicCulturalChatAgent:
 
 # Example usage
 if __name__ == "__main__":
-    translit_dir = "/Users/paarthmiglani/PycharmProjects/testingagent/data/nlpdata"
+    from pathlib import Path
+    BASE_DIR = Path(__file__).resolve().parents[2]
+    translit_dir = BASE_DIR / "data" / "nlpdata"
     knowledge_dir = translit_dir
     agent = IndicCulturalChatAgent(translit_dir, knowledge_dir)
     print(agent.handle_input("धर्म"))

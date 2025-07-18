@@ -3,11 +3,14 @@ import cv2
 import csv
 
 # Paths to your folders
-images_dir = "/Users/paarthmiglani/PycharmProjects/manualagent/images"
-labels_dir = "/Users/paarthmiglani/PycharmProjects/manualagent/labels"
-source_anno_csv = "/Users/paarthmiglani/PycharmProjects/testingagent/data/train_annotations.csv"
-crops_dir = "/Users/paarthmiglani/PycharmProjects/manualagent/ocr_crops"
-ANNOT_OUT = "/Users/paarthmiglani/PycharmProjects/testingagent/data/crop_annotations.csv"
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parents[2]
+
+images_dir = BASE_DIR / "data" / "images"
+labels_dir = BASE_DIR / "data" / "labels"
+source_anno_csv = BASE_DIR / "data" / "train_annotations.csv"
+crops_dir = BASE_DIR / "data" / "ocr_crops"
+ANNOT_OUT = BASE_DIR / "data" / "crop_annotations.csv"
 
 os.makedirs(crops_dir, exist_ok=True)
 

@@ -2,13 +2,13 @@ model:
   input_channels: 1
   rnn_hidden_size: 512
   num_rnn_layers: 2
-  char_list_path: /Users/paarthmiglani/PycharmProjects/testingagent/data/char_list.txt
+  char_list_path: data/char_list.txt
 training:
-  dataset_path: /Users/paarthmiglani/PycharmProjects/manualagent/images
-  annotations_file: /Users/paarthmiglani/PycharmProjects/testingagent/data/train_annotations.csv
-  validation_dataset_path: /Users/paarthmiglani/PycharmProjects/manualagent/validation_images
-  validation_annotations_file: /Users/paarthmiglani/PycharmProjects/testingagent/data/val_annotations.csv
-  char_list_path: /Users/paarthmiglani/PycharmProjects/testingagent/data/char_list.txt
+  dataset_path: data/images
+  annotations_file: data/train_annotations.csv
+  validation_dataset_path: data/validation_images
+  validation_annotations_file: data/val_annotations.csv
+  char_list_path: data/char_list.txt
   batch_size: 32
   epochs: 10
   learning_rate: 0.001

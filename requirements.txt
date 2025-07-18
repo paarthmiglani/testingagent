@@ -1,0 +1,14 @@
+streamlit
+pandas
+torch
+opencv-python
+easyocr
+albumentations
+tqdm
+editdistance
+paddleocr
+pyyaml
+langdetect
+jiwer
+Pillow
+numpy
