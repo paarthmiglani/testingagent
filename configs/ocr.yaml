@@ -1,0 +1,19 @@
+model:
+  input_channels: 1
+  rnn_hidden_size: 512
+  num_rnn_layers: 2
+  char_list_path: /Users/paarthmiglani/PycharmProjects/testingagent/data/char_list.txt
+training:
+  dataset_path: /Users/paarthmiglani/PycharmProjects/manualagent/images
+  annotations_file: /Users/paarthmiglani/PycharmProjects/testingagent/data/train_annotations.csv
+  validation_dataset_path: /Users/paarthmiglani/PycharmProjects/manualagent/validation_images
+  validation_annotations_file: /Users/paarthmiglani/PycharmProjects/testingagent/data/val_annotations.csv
+  char_list_path: /Users/paarthmiglani/PycharmProjects/testingagent/data/char_list.txt
+  batch_size: 32
+  epochs: 10
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  grad_clip_norm: 5
+  output_dir: models/ocr/
+preprocessing:
+  binarize: true

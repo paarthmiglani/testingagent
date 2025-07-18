@@ -1,0 +1,4 @@
+train: /Users/paarthmiglani/PycharmProjects/manualagent/images
+val: /Users/paarthmiglani/PycharmProjects/manualagent/yolo/images
+nc: 1
+names: ["text"]
