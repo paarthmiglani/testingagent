@@ -1,3 +1,4 @@
+
 # Indic-OCR Chatbot Demo
 
 This project combines simple OCR and NLP components to explore Indian cultural texts.
