@@ -3,11 +3,14 @@ import cv2
 import csv
 
 # --- UPDATE THESE FOR VALIDATION SPLIT ---
-images_dir = "/Users/paarthmiglani/PycharmProjects/manualagent/validation_images"
-labels_dir = "/Users/paarthmiglani/PycharmProjects/manualagent/validation_labels"
-source_anno_csv = "/Users/paarthmiglani/PycharmProjects/testingagent/data/val_annotations.csv"
-crops_dir = "/Users/paarthmiglani/PycharmProjects/manualagent/ocr_crops_val"
-ANNOT_OUT = "/Users/paarthmiglani/PycharmProjects/testingagent/data/crop_annotations_val.csv"
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parents[2]
+
+images_dir = BASE_DIR / "data" / "validation_images"
+labels_dir = BASE_DIR / "data" / "validation_labels"
+source_anno_csv = BASE_DIR / "data" / "val_annotations.csv"
+crops_dir = BASE_DIR / "data" / "ocr_crops_val"
+ANNOT_OUT = BASE_DIR / "data" / "crop_annotations_val.csv"
 
 os.makedirs(crops_dir, exist_ok=True)
 

@@ -2,9 +2,12 @@ import os
 import glob
 
 # Define paths
-IMAGE_DIR = "/Users/paarthmiglani/PycharmProjects/manualagent/yolo/images"
-GT_DIR = "/Users/paarthmiglani/PycharmProjects/manualagent/yolo/text"
-OUT_LABEL_DIR = "/Users/paarthmiglani/PycharmProjects/manualagent/yolo/labels"
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parents[2]
+
+IMAGE_DIR = BASE_DIR / "data" / "yolo" / "images"
+GT_DIR = BASE_DIR / "data" / "yolo" / "text"
+OUT_LABEL_DIR = BASE_DIR / "data" / "yolo" / "labels"
 
 os.makedirs(OUT_LABEL_DIR, exist_ok=True)
 

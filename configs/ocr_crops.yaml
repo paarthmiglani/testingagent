@@ -2,14 +2,14 @@ model:
   input_channels: 1
   rnn_hidden_size: 1024
   num_rnn_layers: 2
-  char_list_path: /Users/paarthmiglani/PycharmProjects/testingagent/data/char_list.txt
+  char_list_path: data/char_list.txt
 
 training:
-  dataset_path: /Users/paarthmiglani/PycharmProjects/manualagent/ocr_crops                  # Train image crops
-  annotations_file: /Users/paarthmiglani/PycharmProjects/testingagent/data/crop_annotations.csv   # Train crops CSV
-  validation_dataset_path: /Users/paarthmiglani/PycharmProjects/manualagent/ocr_crops_val        # Validation image crops (same dir, different CSV)
-  validation_annotations_file: /Users/paarthmiglani/PycharmProjects/testingagent/data/crop_annotations_val.csv # Validation crops CSV
-  char_list_path: /Users/paarthmiglani/PycharmProjects/testingagent/data/char_list.txt
+  dataset_path: data/ocr_crops                  # Train image crops
+  annotations_file: data/crop_annotations.csv   # Train crops CSV
+  validation_dataset_path: data/ocr_crops_val        # Validation image crops (same dir, different CSV)
+  validation_annotations_file: data/crop_annotations_val.csv # Validation crops CSV
+  char_list_path: data/char_list.txt
   batch_size: 16
   epochs: 100
   learning_rate: 0.01
